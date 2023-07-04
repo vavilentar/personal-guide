@@ -231,9 +231,13 @@ h1 {
 
 @media (max-width: 769px) {
 	.tab {
-		grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: column;
 		row-gap: 25px;
 		width: 95%;
+	}
+	.tab:nth-child(even) {
+		flex-direction: column-reverse;
 	}
 	.exurcions_tabs {
 		row-gap: 25px;
