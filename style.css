@@ -100,7 +100,6 @@ h1 {
 
 .block_info {
 	display: flex;
-	text-align: justify;
 	flex-direction: column;
 	gap: 20px;
 	align-items: start;
