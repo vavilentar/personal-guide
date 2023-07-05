@@ -117,8 +117,30 @@ h1 {
 	font-size: 24px;
 }
 
+.about-me_text ul {
+	display: flex;
+	flex-direction: column;
+	row-gap: 25px;
+}
+
 .about-me_text li {
-	list-style-type: disc;
+	/* list-style-type: disc; */
+	position: relative;
+}
+
+.about-me_text li:nth-child(even) {
+	color: #FFB841;
+}
+
+.about-me_text li:before {
+	position: absolute;
+	content: '';
+	width: 24px;
+	height: 24px;
+	background-image: url(./bullets.png);
+	left: -35px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .block_info h2 {
@@ -159,6 +181,7 @@ h1 {
 	width: fit-content;
 	position: relative;
 }
+
 .ex-title_block:after {
 	content: '';
 	position: absolute;
@@ -169,15 +192,18 @@ h1 {
 	background-color: #FFB841;
 	height: 4px;
 }
+
 .tab_info h3 {
 	font-size: 32px;
 	line-height: 40px;
 	letter-spacing: 1.5px;
 }
+
 .tab_info span {
 	color: #FFB841;
 	text-transform: uppercase;
 }
+
 .tab_info p {
 	font-size: 22px;
 }
@@ -199,13 +225,20 @@ h1 {
 
 .tab {
 	display: grid;
-	grid-template-columns: repeat(2, 450px);
+	grid-template-columns: repeat(2, 500px);
 	height: fit-content;
 	align-items: center;
 	column-gap: 50px;
 	background-color: white;
 	padding: 15px;
 	border-radius: 15px;
+
+	opacity: 0;
+	transition: opacity .3s ease-in;
+}
+
+.box-show {
+	opacity: 1;
 }
 
 .tab_photo {
@@ -224,6 +257,7 @@ h1 {
 	flex-direction: column;
 	align-items: center;
 }
+
 .interview iframe {
 	margin: 25px auto;
 	width: 95%;
@@ -236,26 +270,36 @@ h1 {
 		row-gap: 25px;
 		width: 95%;
 	}
+
 	.tab:nth-child(even) {
 		flex-direction: column-reverse;
 	}
+
 	.exurcions_tabs {
 		row-gap: 25px;
 	}
+
 	.hero {
 		padding: 0 20px;
 		grid-template-columns: 1fr;
 
 	}
+
 	.about-me_info-block {
 		padding: 0 20px;
 		grid-template-columns: 1fr;
 	}
+
 	.about-me_text {
 		padding: 0 20px;
 	}
+
 	.nav {
 		padding: 0 20px;
+	}
+
+	.about-me_text li:before {
+		left: -32px;
 	}
 }
 
