@@ -265,6 +265,13 @@ h1 {
 	width: 95%;
 }
 
+.footer {
+	display: flex;
+	align-items: center;
+	height: 100px;
+	justify-content: center;
+}
+
 @media (max-width: 769px) {
 	.tab {
 		display: flex;
